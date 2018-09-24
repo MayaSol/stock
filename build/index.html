@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+	<title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="top-menu">
+    <div class="top-menu__logo logo">
+      <div class="logo__img">
+        <img src="img/logo.png" alt="">
+      </div>
+    </div>
+    <div class="top-menu__main-menu main-menu">
+      <ul class="main-menu__list">
+        <li class="main-menu__item">
+          <a href="" class="main-menu__link main-menu__messages">
+            <svg class="icon icon-messages" aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-mail"></use>
+            </svg>
+            <div class="main-menu__counter"><span>3</span></div>
+          </a>
+        </li>
+        <li class = "main-menu__item">
+          <a href="" class="main-menu__link main-menu__alarms">
+            <svg class="icon icon-alarms" aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-alarm"></use>
+            </svg>
+            <div class="main-menu__counter"><span>3</span></div>
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a href="" class="main-menu__link main-menu__flags">
+            <svg class="icon icon-flags" aria-hidden="true" role="img" width="30" height="30"> <use href="img/svg-sprite/svg-sprite.svg#icon-flag" xlink:href="img/svg-sprite/svg-sprite.svg#icon-flag"></use>
+            </svg>
+            <div class="main-menu__counter"><span>3</span></div>
+          </a>
+        </li>
+        <li class="main-menu__item">
+          <a href="" class="main-menu__logo">
+            <div class="main-menu__logo-img">
+            </div>
+            StockPoint
+          </a>
+        </li>
+        <li class="main-menu__item main-menu__item--settings">
+          <a href="" class="main-menu__link main-menu__settings">
+            <svg class="icon icon-gear" aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-gear"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+
+  <main>
+
+        <section class="sidebar">
+      <ul class="sidebar__list">
+        <li class="sidebar__item sidebar__item--active sidebar__item--create">
+          <a href="" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-create"></use>
+            </svg>
+            СОЗДАТЬ
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--choose">
+          <a href="" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-choose"></use>
+            </svg>
+            ВЫБРАТЬ
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--invoice">
+          <a href="" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-invoice"></use>
+            </svg>
+            СЧЕТА
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--rest">
+          <a href="" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-rest"></use>
+            </svg>
+            ОСТАТКИ
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--clients">
+          <a href="" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-clients"></use>
+            </svg>
+            КЛИЕНТЫ
+          </a>
+        </li>
+        <li class="sidebar__item sidebar__item--warehouse">
+          <a href="" class="sidebar__link">
+            <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-warehouse"></use>
+            </svg>
+            СКЛАДЫ
+          </a>
+        </li>
+      </ul>
+    </section>
+
+
+    <section class="content">
+
+    <section class="breadcrumbs__container">
+  <ul class="breadcrumbs">
+    <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+    <li class="breadcrumbs__item">Создать</li>
+  </ul>
+</section>
+
+
+      <section class="select">
+        <label for="select-city"><span>Город</span></label>
+        <div  class="select__wrapper select__wrapper--city">
+          <select id="select-city">
+            <option value="" disabled selected>Выбрать город</option>
+            <option value="city-01">Москва</option>
+            <option value="city-02">Санкт-Петербург</option>
+          </select>
+          <div class="select__arrow">
+              <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-arrow-up"></use>
+              </svg>
+          </div>
+        </div>
+
+        <label for="select-warehouse"><span>Склад</span></label>
+        <div class="select__wrapper select__wrapper--warehouse">
+          <select id="select-warehouse">
+            <option value="" disabled selected>Выбрать склад</option>
+            <option value="wharehouse-01">Склад 1</option>
+            <option value="wharehouse-02">Склад 2</option>
+            <option value="wharehouse-03">Склад 3</option>
+          </select>
+          <div class="select__arrow">
+              <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-arrow-up"></use>
+              </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="data">
+
+
+       <table id="table-reservation" class="data-table data-table--reservation">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-city">Город</td>
+              <td class="hd-address">Адрес</td>
+              <td class="hd-price-pallete-day">Цена паллета/сутки</td>
+              <td class="hd-free">Свободно</td>
+              <td class="hd-reserved">Бронь</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-city col-text">Красноярск</td>
+              <td class="col-address col-text">ул. Тимирязева, д. 18</td>
+              <td class="col-price-pallete-day">25</td>
+              <td class="col-free">100</td>
+              <td class="col-reserved col-btn"><a href="" class="btn btn--table btn-reserve">Забронировать</a></td>
+            </tr>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-city col-text">Красноярск</td>
+              <td class="col-address col-text">ул. Тимирязева, д. 18</td>
+              <td class="col-price-pallete-day">25</td>
+              <td class="col-free">100</td>
+              <td class="col-reserved"><a href="" class="btn btn--table btn--reserve">Забронировать</a></td>
+            </tr>
+          </tbody>
+       </table>
+
+
+       <table id="table-sku" class="data-table data-table--sku">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-sku">SKU</td>
+              <td class="hd-pack-amount">Количество упаковок</td>
+              <td class="hd-items-amount">Количество штук</td>
+              <td class="hd-photo">Фото</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-sku">4604575748</td>
+              <td class="col-pack-amount">15</td>
+              <td class="col-items-amount">300</td>
+              <td class="col-photo"><a href="" class="btn btn--table btn--photo"></a></td>
+            </tr>
+            <tr>
+              <td class="col-num">2</td>
+              <td class="col-sku">4604457543</td>
+              <td class="col-pack-amount">40</td>
+              <td class="col-items-amount">800</td>
+              <td class="col-photo"><a href="" class="btn btn--table btn--photo"></a></td>
+            </tr>
+          </tbody>
+       </table>
+
+
+        <table id="table-period" class="data-table data-table--period">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-period">Период</td>
+              <td class="hd-city">Город</td>
+              <td class="hd-address">Адрес</td>
+              <td class="hd-amount-pallete-day">Количество паллет/сутки</td>
+              <td class="hd-price-pallete-day">Цена паллета/сутки</td>
+              <td class="hd-summ">Сумма</td>
+              <td class="hd-status">Статус</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-period col-text">01.09/20.09</td>
+              <td class="col-city col-text">Красноярск</td>
+              <td class="col-address col-text">ул. Тимирязева, д. 18</td>
+              <td class="col-amount-pallete-day">140</td>
+              <td class="col-price-pallete-day">25</td>
+              <td class="col-summ">3500</td>
+              <td class="col-status">Оплачено</td>
+            </tr>
+            <tr>
+              <td class="col-num">2</td>
+              <td class="col-period col-text">01.09/20.09</td>
+              <td class="col-city col-text">Ижевск</td>
+              <td class="col-address col-text">ул. Верхняя, д. 101</td>
+              <td class="col-amount-pallete-day">300</td>
+              <td class="col-price-pallete-day">22</td>
+              <td class="col-summ">6600</td>
+              <td class="col-status"><a href="" class="btn btn--table btn--pay">Оплатить</a></td>
+            </tr>
+          </tbody>
+       </table>
+
+      </section>
+
+    </section>
+
+  </main>
+
+    <footer class="footer">
+    <span class="footer__credentials">
+      Developed by EPlatCom 2018 © . All rights reserved
+    </span>
+    <span class="footer__version">
+      Version <span class="footer__version-num">1.1</span>
+    </span>
+  </footer>
+
+
+</body>
+</html>

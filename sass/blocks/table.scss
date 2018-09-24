@@ -1,0 +1,97 @@
+.data-table {
+  margin-bottom: 20px;
+  border: 1px solid #949494;
+  border-collapse: collapse;
+  color: #141414;
+  font-family: $font-family;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  td {
+    padding: 15px 5px;
+    border: 1px solid #949494;
+    text-align: center;
+  }
+  .col-text {
+    text-align: left;
+    padding-left: 15px;
+    font-size: 14px;
+  }
+  .col-btn {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-num {
+    min-width: 50px;
+  }
+  .col-city {
+    min-width: 105px;
+  }
+  .col-address {
+    min-width: 190px;
+  }
+  .col-price-pallete-day {
+    min-width: 205px;
+  }
+  .col-free {
+    min-width: 135px;
+  }
+  .col-sku {
+    min-width: 105px;
+  }
+  .col-pack-amount {
+    min-width: 215px;
+  }
+  .col-items-amount {
+    min-width: 175px;
+  }
+  .col-photo {
+    padding: 5px;
+    min-width: 130px;
+  }
+  .col-period {
+    min-width: 135px;
+  }
+  .col-amount-pallete-day {
+    min-width: 140px;
+  }
+  .col-summ {
+    min-width: 100px;
+  }
+  .col-status {
+    min-width: 142px;
+    color: #545454;
+    font-size: 16px;
+  }
+
+
+  thead {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.btn--table {
+  padding: 8px 15px;
+  color: #ffffff;
+  border-radius: 5px;
+  background-color: #545454;
+  text-transform: capitalize;
+  &:hover,
+  &:active {
+    color: #ffffff;
+  }
+}
+
+.btn--photo {
+  box-sizing: border-box;
+  background-image: url("img/photo.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 24px 21px;
+  width: 35px;
+  height: 35px;
+  background-color: #545454;
+  border-radius: 50%;
+}

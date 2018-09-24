@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 55px;
+  padding-left: $sidebar-width;
+  background-color: #5a5a5a;
+  background-image: url("img/top-bg.png");
+  background-repeat: repeat;
+  &__credentials {
+    color: #edf0f5;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &__version {
+    margin-right: 12px;
+    color: #edf0f5;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: 700;
+  }
+  &__version-num {
+    font-weight: 400;
+  }
+}

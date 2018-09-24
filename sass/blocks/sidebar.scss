@@ -1,0 +1,87 @@
+.sidebar {
+  display: flex;
+  justify-content: center;
+  width: $sidebar-width;
+  min-width: $sidebar-width;
+  overflow: auto;
+  background-color: #b2ad81;
+  padding-top: 100px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #5c5c5d;
+    &:hover,
+    &:active {
+      color: #5c5c5d;
+  }
+}
+
+  &__item {
+    margin-bottom: 19px;
+    color: #5c5c5d;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    svg {
+      fill: #5c5c5d;
+      margin-right: 5px;
+    }
+    &--active {
+      svg {
+        fill: #ffffff;
+      }
+      color: #ffffff;
+      .sidebar__link {
+        color: #ffffff;
+      }
+    }
+    &--create {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &--choose {
+      svg {
+        width: 18px;
+        height: 21px;
+      }
+    }
+    &--invoice {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &--rest {
+      svg {
+        width: 22px;
+        height: 18px;
+      }
+    }
+    &--clients {
+      svg {
+        width: 21px;
+        height: 18px;
+      }
+    }
+    &--warehouse {
+      svg {
+        width: 22px;
+        height: 22px;
+      }
+    }
+  }
+
+}
