@@ -9,9 +9,9 @@
   <main>
 
     @@include('sidebar.html', {
-      "create-item-class": "sidebar__item--active",
+      "create-item-class": "",
       "choose-item-class": "",
-      "invoice-item-class": "",
+      "invoice-item-class": "sidebar__item--active",
       "rest-item-class": "",
       "clients-item-class": "",
       "warehouse-item-class": ""
@@ -51,6 +51,35 @@
       </section>
 
       <section class="data">
+
+       <table id="table-invoices" class="data-table data-table--invoices">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-sku">SKU</td>
+              <td class="hd-pack-amount">Количество упаковок</td>
+              <td class="hd-items-amount">Количество штук</td>
+              <td class="hd-photo">Фото</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-sku">4604575748</td>
+              <td class="col-pack-amount">15</td>
+              <td class="col-items-amount">300</td>
+              <td class="col-photo"><a href="" class="btn btn--table btn--photo"></a></td>
+            </tr>
+            <tr>
+              <td class="col-num">2</td>
+              <td class="col-sku">4604457543</td>
+              <td class="col-pack-amount">40</td>
+              <td class="col-items-amount">800</td>
+              <td class="col-photo"><a href="" class="btn btn--table btn--photo"></a></td>
+            </tr>
+          </tbody>
+       </table>
+
       </section>
 
     </section>

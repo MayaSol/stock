@@ -147,7 +147,7 @@ gulp.task("html:copy", function(){
   .pipe(gulp.dest("build"));
 });
 
-gulp.task("html:update", ["html:build", "html:copy"], function(done){
+gulp.task("html:update", ["html:build"], function(done){
   server.reload();
   done();
 });

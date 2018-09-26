@@ -1,2 +1,6 @@
 node_modules/
 *.css
+_design/
+build/
+StockPoint/
+StockPoint.zip

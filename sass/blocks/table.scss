@@ -1,3 +1,9 @@
+@mixin col-text {
+  text-align: left;
+  padding-left: 15px;
+  font-size: 14px;
+}
+
 .data-table {
   margin-bottom: 20px;
   border: 1px solid #949494;
@@ -13,9 +19,14 @@
     text-align: center;
   }
   .col-text {
-    text-align: left;
-    padding-left: 15px;
-    font-size: 14px;
+    @include col-text;
+  }
+  .col-period,
+  .col-name,
+  .col-city,
+  .col-address,
+  .col-contact {
+    @include col-text;
   }
   .col-btn {
     padding-left: 15px;

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('head.html')
+
+<body>
+
+  @@include('header.html')
+
+  <main>
+
+    @@include('sidebar.html', {
+      "create-item-class": "",
+      "choose-item-class": "",
+      "invoice-item-class": "",
+      "rest-item-class": "sidebar__item--active",
+      "clients-item-class": "",
+      "warehouse-item-class": ""
+    })
+
+    <section class="content">
+
+    @@include('breadcrumbs.html')
+
+      <section class="select">
+        <label for="select-city"><span>Город</span></label>
+        <div  class="select__wrapper select__wrapper--city">
+          <select id="select-city">
+            <option value="" disabled selected>Выбрать город</option>
+            <option value="city-01">Москва</option>
+            <option value="city-02">Санкт-Петербург</option>
+          </select>
+          <div class="select__arrow">
+              <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-arrow-up"></use>
+              </svg>
+          </div>
+        </div>
+
+        <label for="select-warehouse"><span>Склад</span></label>
+        <div class="select__wrapper select__wrapper--warehouse">
+          <select id="select-warehouse">
+            <option value="" disabled selected>Выбрать склад</option>
+            <option value="wharehouse-01">Склад 1</option>
+            <option value="wharehouse-02">Склад 2</option>
+            <option value="wharehouse-03">Склад 3</option>
+          </select>
+          <div class="select__arrow">
+              <svg aria-hidden="true" role="img" width="30" height="30"> <use xlink:href="img/svg-sprite/svg-sprite.svg#icon-arrow-up"></use>
+              </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="data">
+
+        <table id="table-rests" class="data-table data-table--rests">
+          <thead>
+            <tr>
+              <td class="hd-num">№</td>
+              <td class="hd-period">Период</td>
+              <td class="hd-city">Город</td>
+              <td class="hd-address">Адрес</td>
+              <td class="hd-amount-pallete-day">Количество паллет/сутки</td>
+              <td class="hd-price-pallete-day">Цена паллета/сутки</td>
+              <td class="hd-summ">Сумма</td>
+              <td class="hd-status">Статус</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col-num">1</td>
+              <td class="col-period">01.09/20.09</td>
+              <td class="col-city">Красноярск</td>
+              <td class="col-address">ул. Тимирязева, д. 18</td>
+              <td class="col-amount-pallete-day">140</td>
+              <td class="col-price-pallete-day">25</td>
+              <td class="col-summ">3500</td>
+              <td class="col-status">Оплачено</td>
+            </tr>
+            <tr>
+              <td class="col-num">2</td>
+              <td class="col-period">01.09/20.09</td>
+              <td class="col-city">Ижевск</td>
+              <td class="col-address">ул. Верхняя, д. 101</td>
+              <td class="col-amount-pallete-day">300</td>
+              <td class="col-price-pallete-day">22</td>
+              <td class="col-summ">6600</td>
+              <td class="col-status"><a href="" class="btn btn--table btn--pay">Оплатить</a></td>
+            </tr>
+          </tbody>
+       </table>
+
+      </section>
+
+    </section>
+
+  </main>
+
+  @@include('footer.html')
+
+
+</body>
+</html>
