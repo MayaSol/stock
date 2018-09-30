@@ -1,0 +1,118 @@
+<articl'\20BD'e class="modal modal--warehouse-create">
+  <div class="modal__overlay">
+    <div class="modal__inner">
+      <div class="modal__container">
+
+        <section class="modal__section modal__section--warehouse">
+          <div class="modal__title"><span>Информация о складе</span></div>
+          <div class="modal__row">
+            @@include('field-select.html', {
+              "classes": "field--modal select select--city",
+              "label": "Город",
+              "placeholder": "Выберите город",
+              "options": {"o1": {"value": "wharehouse_01", "text": "Склад 1"},
+                          "o2": {"value": "wharehouse_02", "text": "Склад 2"},
+                          "o3": {"value": "wharehouse_03", "text": "Склад 3"}
+                         }
+            })
+            @@include('field-text.html', {
+              "type": "text",
+              "classes": "field--modal field--address",
+              "label": "Адрес",
+              "placeholder": "Выберите адрес"
+            })
+            @@include('field-text.html', {
+              "type": "text",
+              "classes": "field--modal field--price",
+              "label": "Цена за п/с",
+              "placeholder": "Введите цену"
+            })
+            @@include('field-text.html', {
+              "type": "text",
+              "classes": "field--modal field--amount-all",
+              "label": "Всего",
+              "placeholder": "Введите кол-во"
+            })
+            @@include('field-text.html', {
+              "type": "text",
+              "classes": "field--modal field--amount-free",
+              "label": "Свободно",
+              "placeholder": "Введите кол-во"
+            })
+          </div>
+        </section>
+
+        <section class="modal__section modal__section--contarctor contractor">
+          <div class="modal__title"><span>Информация о подрядчике</span></div>
+            <div class="contractor__inner">
+              <div class="contractor__row">
+                @@include('field-text.html', {
+                  "type": "text",
+                  "classes": "field--modal field--legal-address",
+                  "label": "Юридический адрес",
+                  "placeholder": "Введите или выберите юр. адрес"
+                })
+                @@include('field-text.html', {
+                  "type": "text",
+                  "classes": "field--modal field--fact-address",
+                  "label": "Фактический адрес",
+                  "placeholder": "Введите или выберите факт. адрес"
+                })
+              </div>
+              <div class="contractor__row">
+                @@include('field-text.html', {
+                  "type": "text",
+                  "classes": "field--modal field--manager",
+                  "label": "Руководитель",
+                  "placeholder": "Контактные данные"
+                })
+                @@include('field-text.html', {
+                  "type": "phone",
+                  "classes": "field--modal field--manager-phone",
+                  "label": "Телефон",
+                  "placeholder": "+7(012) 345 67 89"
+                })
+                @@include('field-text.html', {
+                  "type": "email",
+                  "classes": "field--modal field--manager-email",
+                  "label": "E-mail",
+                  "placeholder": "yourmail@mail.mail"
+                })
+              </div>
+              <div class="contractor__row">
+                @@include('field-text.html', {
+                  "type": "text",
+                  "classes": "field--modal field--contact",
+                  "label": "Контактное лицо",
+                  "placeholder": "Контактные данные"
+                })
+                @@include('field-text.html', {
+                  "type": "phone",
+                  "classes": "field--modal field--contact-phone",
+                  "label": "Телефон",
+                  "placeholder": "+7(012) 345 67 89"
+                })
+                @@include('field-text.html', {
+                  "type": "email",
+                  "classes": "field--modal field--contact-email",
+                  "label": "E-mail",
+                  "placeholder": "yourmail@mail.mail"
+                })
+            </div>
+            </div>
+        </section>
+
+        <div class="modal__buttons-load">
+            <button class="btn btn--main btn--load" href="index.html">Загрузить свидетельство на объект</button>
+            <button class="btn btn--main btn--load" href="index.html">Загрузить Реквизиты</button>
+        </div>
+
+        <div class="modal__btn-submit">
+          <button class="btn btn--main btn--modal-submit" href="index.html">Добавить склад</button>
+        </div>
+
+        <a class="btn btn--modal-close"></a>
+      </div>
+    </div>
+  </div>
+</article>

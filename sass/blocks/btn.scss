@@ -41,3 +41,39 @@ a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none;
 }
+
+.btn--main {
+  padding: 10px 30px 12px;
+  border-radius: 5px;
+  background-color: #545454;
+  color: #ffffff;
+  font-family: $font-family;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  cursor: pointer;
+  a {
+    color: #ffffff;
+    &:hover,
+    &:active {
+      color: #ffffff;
+    }
+
+  }
+}
+
+.btn--modal-submit {
+  background-color: #b2ad81;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn--load {
+  padding-right: 35px;
+  padding-left: 13px;
+  background-image: url("img/icon-load.svg");
+  background-repeat: no-repeat;
+  background-position: center right 13px;
+}

@@ -1,0 +1,246 @@
+.modal {
+  display: none;
+  &--opened {
+    display: block;
+  }
+  &__overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(57, 61, 71, 0.6);
+    z-index: 1000;
+  }
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    width: 862px;
+    min-height: 200px;
+    padding: 35px 34px;
+    background-color: #edf0f5;
+    box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+    border: 1px solid #c6c6c6;
+    box-sizing: border-box;
+    z-index: 1001;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    font-family: $font-family;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    span {
+      display: block;
+      padding: 0 10px;
+    }
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      flex-grow: 1;
+      width: 100px;
+      top: 50%;
+      border-bottom: 1px dashed #47494f;
+    }
+  }
+  .btn--modal-close {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    display: block;
+    width: 15px;
+    height: 30px;
+    padding: 5px;
+    box-shadow: none;
+    cursor: pointer;
+    &::before {
+      content: 'X';
+      font-family: $font-family;
+      font-size: 20px;
+      line-height: 1;
+      color: #545454;
+    }
+  }
+  &__row {
+    display: flex;
+  }
+  &__section {
+    &--warehouse {
+      margin-bottom: 32px;
+    }
+  }
+  .contractor {
+    &__row {
+      display: flex;
+      align-items: space-between;
+      width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+      min-height: 80px;
+    }
+  }
+  .field {
+    &--modal {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__label {
+      display: inline-block;
+      color: #141414;
+      font-family: $font-family;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+    &__input-wrapper {
+      box-sizing: border-box;
+      display: flex;
+    }
+    select,
+    input {
+      width: 100%;
+      font-size: 11px;
+      padding: 5px;
+      color: #555555;
+      background: transparent;
+      background-color: transparent;
+      border: 0;
+    }
+    input {
+      &::placeholder {
+        color: #555555;
+        opacity: 1;
+      }
+      &::-ms-input-placeholder {
+        color: #555555;
+      }
+      &:-ms-input-placeholder {
+        color: #555555;
+      }
+    }
+  }
+
+  &__buttons-load {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+    .btn--load:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__btn-submit {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  &--warehouse-create {
+
+    .select {
+      &__wrapper {
+        margin-right: 19px;
+      }
+      &--city {
+        .select__wrapper {
+          width: 181px;
+        }
+      }
+    }
+
+    .field {
+      &--text {
+        input {
+          box-sizing: border-box;
+          padding: 5px;
+          border-radius: 5px;
+          border: 1px solid #d3d6df;
+          background-color: #ffffff;
+          height: 40px;
+        }
+      }
+      &--address {
+        width: 181px;
+        margin-right: 19px;
+      }
+      &--price {
+        .field__input-wrapper {
+          display: flex;
+          align-items: center;
+          margin-right: 13px;
+        }
+        input {
+          width: 109px;
+          margin-right: 5px;
+        }
+        .field__input-wrapper::after {
+          content: "\20BD";
+          font-family: "PTSans";
+          font-size: 15px;
+          font-weight: 700;
+        }
+      }
+      &--amount-all {
+        .field__input-wrapper {
+          display: flex;
+          align-items: center;
+          margin-right: 13px;
+        }
+        input {
+          width: 109px;
+          margin-right: 5px;
+        }
+        .field__input-wrapper::after {
+          content: "п";
+          font-family: "OpenSans";
+          font-size: 15px;
+          font-weight: 700;
+        }
+      }
+      &--amount-free {
+        .field__input-wrapper {
+          display: flex;
+          align-items: center;
+          margin-right: 13px;
+        }
+        input {
+          width: 109px;
+          margin-right: 5px;
+        }
+        .field__input-wrapper::after {
+          content: "п";
+          font-family: "OpenSans";
+          font-size: 15px;
+          font-weight: 700;
+        }
+      }
+      &--legal-address,
+      &--manager,
+      &--contact {
+        width: 291px;
+        margin-right: 19px;
+      }
+      &--fact-address {
+        width: 291px;
+      }
+      &--manager-phone,
+      &--contact-phone {
+        width: 131px;
+        margin-right: 19px;
+      }
+      &--manager-email,
+      &--contact-email {
+        width: 141px;
+      }
+
+    }
+
+  }
+
+}

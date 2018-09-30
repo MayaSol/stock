@@ -13,3 +13,19 @@
   font-weight: 700;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/ptc55f.woff2') format('woff2'),
+       url('fonts/ptc55f.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url('fonts/ptc75f.woff2') format('woff2'),
+       url('fonts/ptc75f.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}

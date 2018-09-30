@@ -1,5 +1,15 @@
+@mixin field {
+  position: relative;
+  box-sizing: border-box;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid #d3d6df;
+  background-color: transparent;
+}
+
 .select {
   display: flex;
+  justify-content: space-between;
   label {
     display: flex;
     margin-right: 15px;
@@ -12,33 +22,36 @@
     }
   }
   &__wrapper {
-  position: relative;
-  box-sizing: border-box;
-  height: 41px;
-  border-radius: 5px;
-  border: 1px solid #d3d6df;
-  //background-color: #ffffff;
-  color: #555555;
-  font-family: $font-family;
-  font-size: 15px;
-  font-weight: 400;
+    @include field;
+    color: #555555;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: #ffffff;
+    background-image: url("img/icon-arrow-down.svg"),
+    linear-gradient(to left, transparent 40px,#d3d6df 40px,#d3d6df 41px,transparent 41px);
+    background-repeat: no-repeat;
+    background-position: center right 15px, center right;
+    background-size: 16px 10px, 100% 100%;
+
   select {
     padding: 10px 15px;
     height: 41px;
     background: transparent;
+//    background-color: transparent;
     border: 0;
     appearance: none;            /* remove arrow        */
     -webkit-appearance: none;    /* remove arrow Chrome */
     -moz-appearance: none;       /* remove arrow FF     */
-  }
-  &::-ms-expand {
-    display: none;             /* remove arrow IE     */
+    &::-ms-expand {
+      display: none;             /* remove arrow IE     */
+    }
   }
 
   &--city {
     margin: 20px 0;
-    width: 352px;
     margin-right: 45px;
+    width: 352px;
     select {
       width: 352px;
     }
@@ -46,15 +59,12 @@
 
     &--warehouse {
     margin: 20px 0;
+    margin-right: 80px;
     width: 233px;
     select {
       width: 233px;
     }
   }
-
-
-
-
   }
 
   &__arrow {
@@ -77,9 +87,14 @@
     }
   }
 
-
   select option {
     color: blue;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }
