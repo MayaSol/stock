@@ -7,6 +7,14 @@
   background-color: transparent;
 }
 
+@mixin field-icon($icon-url,$color,$icon-width,$icon-height,$rigth) {
+    background-image: url(#{$icon-url}),
+    linear-gradient(to left, transparent 40px,$color 40px,$color 41px,transparent 41px);
+    background-repeat: no-repeat;
+    background-position: center right $rigth, center right;
+    background-size: $icon-width $icon-height, 100% 100%;
+}
+
 .select {
   display: flex;
   justify-content: space-between;

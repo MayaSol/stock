@@ -1,0 +1,67 @@
+<article class="modal modal--reserve">
+  <div class="modal__overlay">
+    <div class="modal__inner">
+      <div class="modal__container">
+        <form class="form form--reserve">
+
+        <section class="modal__section modal__section--reserve-top reserve-top">
+          <div class="reserve-top__row">
+            @@include('field-text.html', {
+              "type": "text",
+              "classes": "field--modal field--amount-pallete",
+              "label": "Количество паллет",
+              "placeholder": "500"
+            })
+            @@include('field-calendar.html',{
+              "classes": "field--delivery-week",
+              "id": "delivery-week",
+              "label": "Неделя поставки",
+              "placeholder": "25"
+          })
+          </div>
+
+        </section>
+
+        <section class="modal__section modal__section--goods-ref goods-ref">
+          <div class="modal__title"><span>Справочно о товаре</span></div>
+          <div class="modal__row">
+            @@include('field-text.html', {
+              "type": "text",
+              "classes": "field--modal field--barcode",
+              "label": "Штрих код",
+              "placeholder": "Выберите штрих-код"
+            })
+            @@include('field-text.html', {
+              "type": "text",
+              "classes": "field--modal field--places-amount",
+              "label": "Кол-во мест",
+              "placeholder": "Кол-во мест"
+            })
+            @@include('field-text.html', {
+              "type": "text",
+              "classes": "field--modal field--items-amount",
+              "label": "Кол-во единиц",
+              "placeholder": "Кол-во единиц"
+            })
+            @@include('field-text.html', {
+              "type": "text",
+              "classes": "field--modal field--weight",
+              "label": "Вес",
+              "placeholder": "Введите вес"
+            })
+          </div>
+          <div class="goods-ref__btns">
+            <button class='btn btn--main btn--add-good'>Добавить товар</button>
+          </div>
+        </section>
+
+        <div class="modal__btn-submit">
+          <button class="btn btn--main btn--modal-submit" href="index.html">Подтвердить бронирование</button>
+        </div>
+
+        <a class="btn btn--modal-close"></a>
+      </form>
+      </div>
+    </div>
+  </div>
+</article>

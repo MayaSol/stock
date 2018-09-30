@@ -1,3 +1,31 @@
+@mixin placeholder($color) {
+  &::placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  &::-ms-input-placeholder {
+    color: $color;
+  }
+  &:-ms-input-placeholder {
+    color: $color;
+  }
+}
+
+@mixin field-after($content,$font-family) {
+  .field__input-wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 13px;
+  }
+  .field__input-wrapper::after {
+    content: $content;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+
 .modal {
   display: none;
   &--opened {
@@ -17,7 +45,6 @@
     top: 50%;
     left: 50%;
     transform: translateY(-50%) translateX(-50%);
-    width: 862px;
     min-height: 200px;
     padding: 35px 34px;
     background-color: #edf0f5;
@@ -74,6 +101,15 @@
     &--warehouse {
       margin-bottom: 32px;
     }
+    &--reserve-top {
+      margin-bottom: 25px;
+    }
+    &--goods-ref {
+      margin-bottom: 35px;
+      .modal__row {
+        margin-bottom: 13px;
+      }
+    }
   }
   .contractor {
     &__row {
@@ -124,24 +160,24 @@
         color: #555555;
       }
     }
-  }
-
-  &__buttons-load {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 34px;
-    .btn--load:not(:last-child) {
-      margin-right: 16px;
+    &--text {
+      input {
+        box-sizing: border-box;
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid #d3d6df;
+        background-color: #ffffff;
+        height: 40px;
+      }
     }
   }
 
-  &__btn-submit {
-    display: flex;
-    justify-content: center;
-  }
 
-
+//Создать склад
   &--warehouse-create {
+    .modal__inner {
+      width: 862px;
+    }
 
     .select {
       &__wrapper {
@@ -241,6 +277,93 @@
 
     }
 
+  }
+
+  //Забронировать
+
+  &--reserve {
+    .modal__inner {
+      width: 642px;
+    }
+    .reserve-top {
+      &__row {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    .field {
+      &--amount-pallete {
+        width: 181px;
+          margin-right: 19px;
+        input {
+          @include placeholder(#000000);
+          color: #000000;
+          font-family: $font-family;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+      &--delivery-week {
+        .field-calendar__inner {
+          width: 181px;
+          background-color: #ffffff;
+          @include field-icon("img/icon-calendar.svg",#d3d6df,20px,20px,12px);
+        }
+        input {
+          @include placeholder(#000000);
+          color: #000000;
+          font-family: $font-family;
+          font-size: 18px;
+          font-weight: 400;
+        }
+      }
+      &--barcode {
+        input {
+          width: 151px;
+          margin-right: 20px;
+        }
+      }
+      &--places-amount {
+        input {
+          width: 109px;
+          margin-right: 5px;
+        }
+        @include field-after('уп',$font-family);
+      }
+      &--items-amount {
+        input {
+          width: 109px;
+          margin-right: 5px;
+        }
+          @include field-after('шт',$font-family);
+      }
+      &--weight {
+        input {
+          width: 109px;
+          margin-right: 5px;
+        }
+          @include field-after('кг',$font-family);
+      }
+    }
+    .goods-ref__btn {
+      display: flex;
+      justify-content: flex-start;
+    }
+  }
+
+
+  &__buttons-load {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+    .btn--load:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  &__btn-submit {
+    display: flex;
+    justify-content: center;
   }
 
 }

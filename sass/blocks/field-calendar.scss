@@ -1,0 +1,58 @@
+.field-calendar {
+  input {
+    width: 100%;
+    padding: 10px 15px;
+    height: 41px;
+    background: transparent;
+    border: 0;
+    font-family: Arial, sans-serif;
+    //appearance: none;            /* remove arrow        */
+    //-webkit-appearance: none;    /* remove arrow Chrome */
+    //-moz-appearance: none;       /* remove arrow FF     */
+    box-sizing: border-box;
+    &::-webkit-inner-spin-button,
+    &::-webkit-calendar-picker-indicator {
+        //display: none;
+        //-webkit-appearance: none;
+        }
+  }
+  &__inner {
+    position: relative;
+    box-sizing: border-box;
+    height: 41px;
+    width: 472px;
+    border-radius: 5px;
+    border: 1px solid #d3d6df;
+    color: #555555;
+    font-size: 15px;
+    font-weight: 400;
+    &::-ms-expand {
+      display: none;             /* remove arrow IE     */
+    }
+  }
+    &__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 100%;
+    border-left: 1px solid #d3d6df;
+    z-index: -1;
+    cursor: pointer;
+    svg {
+      position: absolute;
+      top: 50%;
+      height: 50%;
+      width: 20px;
+      height: 20px;
+      fill: #d3d6df;
+      transform: rotate(180deg) translateY(50%) translateX(-50%);
+      z-index: -1;
+    }
+  }
+}
+
+#ui-datepicker-div {
+  font-size: 12px;
+  line-height: 2;
+}
